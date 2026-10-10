@@ -1,0 +1,100 @@
+:root {
+  --bg: #0a0a0c;
+  --surface: #16161a;
+  --border: #2a2a30;
+  --text: #f0f0f5;
+  --muted: #8e8e9a;
+  --accent: #5b8cff;
+  --accent-hover: #7aa2ff;
+  --success: #3dd68c;
+  --warning: #f5a623;
+  --danger: #ff6b6b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+a { color: var(--accent); }
+code { background: var(--surface); padding: 1px 4px; border-radius: 4px; }
+header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(10,10,12,0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 16px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+header h1 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+.tabs { display: flex; gap: 4px; padding: 8px 12px; overflow-x: auto; border-bottom: 1px solid var(--border); }
+.tab {
+  background: transparent; border: none; color: var(--muted);
+  padding: 8px 14px; border-radius: 8px; font-size: 0.9rem; white-space: nowrap;
+}
+.tab.active { background: var(--surface); color: var(--text); }
+main { padding: 16px; max-width: 640px; margin: 0 auto; }
+section { display: none; }
+section.active { display: block; }
+h2 { margin: 20px 0 8px; }
+h3 { margin: 4px 0; font-size: 1.05rem; }
+label { display: block; font-size: 0.85rem; color: var(--muted); margin: 12px 0 4px; }
+label.check { display: flex; gap: 8px; align-items: center; color: var(--text); font-size: 1rem; }
+label.check input { width: auto; }
+input, textarea, select {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+input[type=range] { padding: 0; }
+textarea { min-height: 90px; resize: vertical; }
+button { font-family: inherit; font-size: 1rem; cursor: pointer; }
+button.primary, .file-btn {
+  display: block; text-align: center;
+  background: var(--accent); color: white;
+  border: none; border-radius: 10px;
+  padding: 12px 16px; font-weight: 600;
+  width: 100%; margin-top: 12px;
+}
+button.primary:active { background: var(--accent-hover); }
+button.primary:disabled { opacity: 0.5; }
+button.ghost, .ghost {
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border); border-radius: 10px;
+  padding: 10px 12px; font-size: 0.9rem; font-weight: 500;
+}
+.file-btn.small { width: auto; margin: 0; display: inline-block; }
+button.danger { color: var(--danger); }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 8px 0; }
+.row > select { flex: 1; min-width: 140px; }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  margin: 12px 0;
+}
+.card summary { cursor: pointer; font-weight: 600; }
+.muted { color: var(--muted); font-size: 0.85rem; }
+.error { color: var(--warning); font-size: 0.85rem; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 0.75rem; background: #2a2a30; margin-right: 4px; }
+.badge.good { background: rgba(61,214,140,0.18); color: var(--success); }
+.badge.mid { background: rgba(245,166,35,0.18); color: var(--warning); }
+.badge.warn { background: rgba(255,107,107,0.18); color: var(--danger); }
+.score { font-size: 1.5rem; font-weight: 700; color: var(--success); float: right; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.stat { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px; text-align: center; }
+.stat b { display: block; font-size: 1.3rem; }
+.copy-field { display: flex; gap: 8px; align-items: center; margin: 6px 0; }
+.copy-field span { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.progress { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin: 8px 0; }
+.progress div { height: 100%; background: var(--accent); }
+#install-prompt { display: none; background: var(--accent); color: white; text-align: center; padding: 10px; font-size: 0.9rem; }
