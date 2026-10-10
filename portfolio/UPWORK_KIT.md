@@ -42,7 +42,7 @@ Raise it by $5–10 after your first 2–3 five-star reviews.
 - **Title:** News-to-Blog AI Agent (n8n + Node.js)
 - **Link:** https://github.com/joshuararick/news-to-blog-agent
 - **Description:** "Daily agent: finds local industry news, writes 200–400 word posts with any AI model via OpenRouter, and saves them to PayloadCMS as drafts for approval. Retries, duplicate protection, 38 automated tests."
-- **Image:** screenshot of your `npm run preview` output, or the n8n canvas after importing the workflow.
+- **Image:** a screenshot of the showcase page's sample run, or of the n8n workflow canvas.
 
 ---
 
@@ -59,7 +59,7 @@ It's an n8n workflow (import in one click) that:
 3. Writes a 200–400 word summary through OpenRouter, so you can switch between GPT, Claude or Grok by changing one field
 4. Saves it to PayloadCMS (as a draft by default, or auto-publish if you prefer)
 
-Reliability: each network step retries automatically, and replies from the AI that aren't usable are rejected instead of published. Setup docs are included.
+Reliability: each network step retries automatically, AI replies that aren't usable are rejected instead of published, and a failure-alert workflow emails you if a run ever breaks. It also handles Payload's rich-text editor, so posts open ready to edit. The prototype has 58 automated tests and setup docs; I'll connect it to your news sources and site during setup.
 
 To fit it to your site I'd need: your industry/location, your Payload posts collection fields, and whether you want drafts or straight-to-live.
 
@@ -74,12 +74,12 @@ One question: should posts go live automatically, or would you like to approve t
 2. **Have you done any SEO work before?**
    "[Be honest. If limited: 'Lightly. I focus on the automation side, but the posts are built for local SEO: location-specific topics, original summaries, and a source link on each post. Happy to follow your keyword guidance.']"
 3. **Describe your recent experience with similar projects.**
-   "Recently I built two automation pipelines: this news-to-blog agent, and JobForge, an app that pulls listings from four job-board APIs, scores them against resumes, generates tailored cover letters and tracks every application. Both follow the same pattern: source → AI transform → destination, on a schedule. [Add real work experience if you have it.]"
+   "Recently I built two automation pipelines: this news-to-blog agent (n8n workflow plus a tested Node.js version, with rich-text output and failure alerts), and JobForge, an app that pulls listings from four job-board APIs, scores them against resumes, generates tailored cover letters and tracks every application. Both follow the same pattern: source → AI transform → destination, on a schedule. [Add real work experience if you have it.]"
 
 ---
 
 ## 3. Before you hit submit ✅
-- [ ] Ran `npm run preview` with a real OpenRouter key and saved a screenshot
+- [ ] Proposal doesn't claim a live run (the prototype is tested with sample data; the first live run happens on the client's setup)
 - [ ] Checked the repo's **Actions** tab shows a green ✅
 - [ ] Replaced every `[BRACKET]` above
 - [ ] Profile photo + identity verification done (Upwork boosts verified profiles)
